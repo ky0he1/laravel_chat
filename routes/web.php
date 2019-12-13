@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('chat', 'ChatController@index');
+
+Route::get('ajax/chat', 'Ajax\ChatController@index');
+Route::post('ajax/chat', 'Ajax\ChatController@create');
